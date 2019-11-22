@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+#text-box
+{
+  margin-left: 110px;
+  background-color: blue
+}
+#btn{
+    margin-left: 160px;
+    align:center
+    
+}
+#div1{
+  margin-left: 100px;
+}
+    </style>
+  </head>
+  <body>
+  <div class="id1">
+    <h1 align="center">TO-DO</h1>
+    <input type="text" id="text-box"><br><br>
+    <button id="btn">submit</button>
+  <div id="div1">
+    <ul id="ul1"></ul>
+  </div>
+  <script>
+   var e=document.getElementById('text-box')
+   var b=document.getElementById('btn')
+   var d=document.getElementById('ul1')
+   b.addEventListener('click',append)
+   function append()
+   {
+     var l=document.createElement('li')
+     d.appendChild(l)
+     l.textContent=e.value
+     console.log(l)
+   }
+  </script>
+</div>
+</body>
+</html>
